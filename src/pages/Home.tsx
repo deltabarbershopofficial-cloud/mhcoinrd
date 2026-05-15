@@ -38,50 +38,13 @@ export default function Home() {
   return (
     <div className="space-y-12">
       {/* Premium Hero Banner */}
-      <section className="relative px-0 md:px-4 pt-0 md:pt-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="relative h-[250px] md:h-[400px] w-full md:rounded-xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-b md:border border-white/10 group">
-            {/* Main Banner Image */}
-            <div className="absolute inset-0 z-0">
-              <img 
-                src="/banner.png" 
-                alt="Banner MH COIN RD" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              {/* Overlay for better readability */}
-              <div className="absolute inset-0 bg-black/30 backdrop-brightness-90"></div>
-            </div>
-
-            {/* Content Over Banner */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 px-4">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="space-y-4"
-              >
-                <div className="inline-block px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-md border border-primary/30 text-primary text-[10px] md:text-xs font-black uppercase tracking-[0.3em] mb-2">
-                  Tercepat • Termurah • Terpercaya
-                </div>
-                <h1 className="text-3xl md:text-6xl font-black italic uppercase text-white drop-shadow-2xl tracking-tighter leading-none">
-                  TOP UP & BONGKAR <br />
-                  <span className="text-primary drop-shadow-[0_0_15px_rgba(212,175,55,0.5)]">COIN ROYAL DREAM</span>
-                </h1>
-                
-                <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
-                  <Link to="/topup">
-                    <button className="px-8 py-3 rounded-full bg-primary text-black font-black uppercase text-xs md:text-sm shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:bg-white hover:scale-105 transition-all">
-                      TOP UP SEKARANG
-                    </button>
-                  </Link>
-                  <Link to="/bongkar">
-                    <button className="px-8 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-black uppercase text-xs md:text-sm hover:bg-white/20 transition-all">
-                      BONGKAR COIN
-                    </button>
-                  </Link>
-                </div>
-              </motion.div>
-            </div>
-          </div>
+      <section className="max-w-7xl mx-auto px-0 md:px-4 pt-0 md:pt-6">
+        <div className="relative w-full overflow-hidden md:rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-b md:border border-white/10 group">
+          <img 
+            src="/banner.png" 
+            alt="Banner MH COIN RD" 
+            className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+          />
         </div>
       </section>
 
