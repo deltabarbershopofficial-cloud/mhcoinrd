@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #d4af37; /* Sophisticated Gold */
+  --color-secondary: #7c3aed; /* Sophisticated Purple */
+  --color-accent: #dc2626; /* Red for Badge */
+  --color-dark: #050505; /* Deepest Black */
+  --color-dark-lighter: #0a0a0a; /* Soft Black */
+  --color-dark-input: #151515;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-dark text-white font-sans antialiased;
+  }
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+}
+
+.purple-gradient {
+  background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+}
+
+.mixed-gradient {
+  background: linear-gradient(135deg, #d4af37 0%, #7c3aed 100%);
+}
+
+.glass-card {
+  @apply bg-dark-lighter border border-secondary/20 shadow-2xl;
+}
+
+.premium-border {
+  @apply border border-primary/20 hover:border-primary/60 transition-all duration-300;
+}
+
+.gold-shadow {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+}
+
+.purple-shadow {
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.2);
+}
+
+.input-field {
+  @apply w-full bg-dark-input border border-gray-800 rounded-lg px-4 py-3 focus:outline-none focus:border-primary text-white transition-all;
+}
