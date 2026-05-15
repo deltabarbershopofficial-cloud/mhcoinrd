@@ -35,10 +35,38 @@ const BONGKAR_PACKAGES = [
 ];
 
 export default function Home() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.5, ease: "easeOut" }
+    }
+  };
+
   return (
-    <div className="space-y-12">
+    <motion.div 
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+      className="space-y-12"
+    >
       {/* Premium Hero Banner */}
-      <section className="max-w-7xl mx-auto px-0 md:px-4 pt-0 md:pt-6">
+      <motion.section 
+        variants={itemVariants}
+        className="max-w-7xl mx-auto px-0 md:px-4 pt-0 md:pt-6"
+      >
         <div className="relative w-full overflow-hidden md:rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-b md:border border-white/10 group">
           <img 
             src="/banner.png" 
@@ -46,10 +74,13 @@ export default function Home() {
             className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]"
           />
         </div>
-      </section>
+      </motion.section>
 
       {/* Mode Selection */}
-      <section className="max-w-7xl mx-auto px-4 grid grid-cols-2 gap-4">
+      <motion.section 
+        variants={itemVariants}
+        className="max-w-7xl mx-auto px-4 grid grid-cols-2 gap-4"
+      >
         <Link to="/topup" className="group">
           <button className="w-full py-4 rounded-xl bg-gradient-to-b from-primary to-[#b8860b] text-black font-black uppercase text-sm shadow-[0_4px_15px_rgba(212,175,55,0.3)] group-hover:scale-[1.01] transition-transform flex items-center justify-center gap-2">
             <ShoppingBag size={18} />
@@ -62,10 +93,14 @@ export default function Home() {
             <span>BONGKAR COIN (JUAL)</span>
           </button>
         </Link>
-      </section>
+      </motion.section>
 
       {/* Top Up Section */}
-      <section id="packages" className="max-w-7xl mx-auto px-4 py-8 space-y-8">
+      <motion.section 
+        variants={itemVariants}
+        id="packages" 
+        className="max-w-7xl mx-auto px-4 py-8 space-y-8"
+      >
         <div className="flex items-center space-x-3 mb-6">
           <div className="w-2 h-8 bg-primary rounded-full"></div>
           <h2 className="text-2xl font-black uppercase tracking-tight">🛒 TOP UP COIN</h2>
@@ -88,10 +123,14 @@ export default function Home() {
             <Star size={12} fill="currentColor" />
           </Link>
         </div>
-      </section>
+      </motion.section>
 
       {/* Bongkar Section */}
-      <section id="bongkar" className="max-w-7xl mx-auto px-4 py-8 space-y-8">
+      <motion.section 
+        variants={itemVariants}
+        id="bongkar" 
+        className="max-w-7xl mx-auto px-4 py-8 space-y-8"
+      >
         <div className="flex items-center space-x-3 mb-6">
           <div className="w-2 h-8 bg-orange-500 rounded-full"></div>
           <h2 className="text-2xl font-black uppercase tracking-tight">💰 BONGKAR COIN (JUAL)</h2>
@@ -114,10 +153,13 @@ export default function Home() {
             <ArrowRightLeft size={12} />
           </Link>
         </div>
-      </section>
+      </motion.section>
 
       {/* Info Section */}
-      <section className="max-w-7xl mx-auto px-4">
+      <motion.section 
+        variants={itemVariants}
+        className="max-w-7xl mx-auto px-4"
+      >
         <div className="glass-card p-8 bg-gradient-to-r from-secondary/10 to-primary/5 border-primary/20">
           <div className="max-w-3xl">
             <h3 className="text-2xl font-black mb-4 uppercase">Mengapa Harus di MH COIN RD?</h3>
@@ -146,10 +188,13 @@ export default function Home() {
             </ul>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* S&K & Panduan Section */}
-      <section className="max-w-7xl mx-auto px-4 py-12">
+      <motion.section 
+        variants={itemVariants}
+        className="max-w-7xl mx-auto px-4 py-12"
+      >
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter italic inline-block relative">
             S&K & PANDUAN TRANSAKSI
@@ -246,7 +291,10 @@ export default function Home() {
           </motion.div>
         </div>
 
-        <div className="mt-12 flex justify-center">
+        <motion.div 
+          variants={itemVariants}
+          className="mt-12 flex justify-center"
+        >
           <a 
             href="https://wa.me/6285835410773" 
             target="_blank" 
@@ -256,8 +304,8 @@ export default function Home() {
             <MessageCircle size={20} />
             <span>Chat Admin via WhatsApp</span>
           </a>
-        </div>
-      </section>
-    </div>
+        </motion.div>
+      </motion.section>
+    </motion.div>
   );
 }

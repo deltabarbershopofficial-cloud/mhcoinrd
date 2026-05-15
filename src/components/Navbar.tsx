@@ -16,7 +16,12 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-dark/80 backdrop-blur-md border-b border-primary/20">
+    <motion.nav 
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="sticky top-0 z-50 bg-dark/80 backdrop-blur-md border-b border-primary/20"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <Link to="/" className="flex items-center space-x-3 group">
@@ -92,6 +97,6 @@ export default function Navbar() {
           </div>
         </motion.div>
       )}
-    </nav>
+    </motion.nav>
   );
 }
