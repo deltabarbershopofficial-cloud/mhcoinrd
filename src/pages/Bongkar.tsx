@@ -65,7 +65,7 @@ Nama: ${formData.recipientName}
 Nomor: ${formData.recipientNumber}
 
 Saya sudah kirim chip ke:
-ID: 9740091 (iya rei)
+ID: 9740091 (MH CoinRd)
 
 Bukti sudah saya upload di website.
 
@@ -225,7 +225,7 @@ Fast respon = prioritas ⚡`;
                   <div className="h-px bg-white/5 w-1/2 mx-auto"></div>
                   <div className="space-y-1">
                     <span className="text-[10px] text-gray-500 uppercase font-black">NICKNAME</span>
-                    <p className="font-black text-xl text-primary italic uppercase tracking-widest">iya rei</p>
+                    <p className="font-black text-xl text-primary italic uppercase tracking-widest">MH CoinRd</p>
                   </div>
                 </div>
               </div>

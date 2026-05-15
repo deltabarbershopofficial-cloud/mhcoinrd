@@ -235,7 +235,7 @@ export default function Home() {
               <li className="flex gap-2"><span>1.</span> <span>Pilih jumlah coin</span></li>
               <li className="flex gap-2"><span>2.</span> <span>Masukkan ID akun</span></li>
               <li className="flex gap-2"><span>3.</span> <span>Isi metode penerimaan (DANA / BANK)</span></li>
-              <li className="flex gap-2 leading-relaxed"><span>4.</span> <span>Kirim chip ke:<br/><span className="text-white font-bold">ID: 9740091</span><br/><span className="text-white font-bold">Nick: iya rei</span></span></li>
+              <li className="flex gap-2 leading-relaxed"><span>4.</span> <span>Kirim chip ke:<br/><span className="text-white font-bold">ID: 9740091</span><br/><span className="text-white font-bold">Nick: MH CoinRd</span></span></li>
               <li className="flex gap-2"><span>5.</span> <span>Upload bukti</span></li>
               <li className="flex gap-2"><span>6.</span> <span>Hubungi admin via WhatsApp</span></li>
               <li className="flex gap-2"><span>7.</span> <span>Tunggu proses pencairan</span></li>
