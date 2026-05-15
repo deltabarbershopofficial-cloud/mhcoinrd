@@ -203,7 +203,7 @@ Fast respon = prioritas ⚡`;
                 >
                   <p className="text-black font-black text-xs uppercase text-center">Scan QRIS untuk melakukan pembayaran</p>
                   <img 
-                    src="/qris.jpeg" 
+                    src="/payment/qris.jpg" 
                     alt="QRIS Payment" 
                     className="w-full h-auto aspect-square object-contain rounded-lg"
                   />
