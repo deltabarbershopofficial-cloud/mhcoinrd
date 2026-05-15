@@ -215,7 +215,7 @@ export default function Home() {
             <ul className="space-y-2 text-[11px] text-gray-400">
               <li className="flex gap-2"><span>1.</span> <span>Pilih nominal coin</span></li>
               <li className="flex gap-2"><span>2.</span> <span>Masukkan ID game</span></li>
-              <li className="flex gap-2"><span>3.</span> <span>Pilih metode pembayaran (BCA / DANA)</span></li>
+              <li className="flex gap-2"><span>3.</span> <span>Pilih metode pembayaran (QRIS / BCA / DANA)</span></li>
               <li className="flex gap-2"><span>4.</span> <span>Lakukan pembayaran</span></li>
               <li className="flex gap-2"><span>5.</span> <span>Kirim bukti via WhatsApp</span></li>
               <li className="flex gap-2"><span>6.</span> <span>Tunggu proses 1-5 menit</span></li>

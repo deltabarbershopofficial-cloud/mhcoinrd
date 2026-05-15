@@ -175,23 +175,43 @@ Fast respon = prioritas ⚡`;
               <div className="w-2 h-6 bg-primary rounded-full"></div>
               <h2 className="font-bold uppercase tracking-wider">3. Metode Pembayaran</h2>
             </div>
-            <div className="p-6 grid grid-cols-2 md:grid-cols-3 gap-3">
-              {METHODS.map((method) => (
-                <button
-                  key={method.id}
-                  onClick={() => setSelectedMethod(method.id)}
-                  className={`p-4 rounded-xl border flex flex-col items-center justify-center gap-2 transition-all ${
-                    selectedMethod === method.id 
-                    ? 'border-primary bg-primary/10' 
-                    : 'border-white/5 bg-[#111]'
-                  }`}
+            <div className="p-6 space-y-6">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                {METHODS.map((method) => (
+                  <button
+                    key={method.id}
+                    onClick={() => setSelectedMethod(method.id)}
+                    className={`p-4 rounded-xl border flex flex-col items-center justify-center gap-2 transition-all ${
+                      selectedMethod === method.id 
+                      ? 'border-primary bg-primary/10' 
+                      : 'border-white/5 bg-[#111]'
+                    }`}
+                  >
+                    <span className="text-2xl">{method.icon}</span>
+                    <span className={`text-[10px] font-bold uppercase ${selectedMethod === method.id ? 'text-primary' : 'text-gray-300'}`}>
+                      {method.name}
+                    </span>
+                  </button>
+                ))}
+              </div>
+
+              {selectedMethod === 'qris' && (
+                <motion.div 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="bg-white p-4 rounded-2xl flex flex-col items-center space-y-4 max-w-sm mx-auto"
                 >
-                  <span className="text-2xl">{method.icon}</span>
-                  <span className={`text-[10px] font-bold uppercase ${selectedMethod === method.id ? 'text-primary' : 'text-gray-300'}`}>
-                    {method.name}
-                  </span>
-                </button>
-              ))}
+                  <p className="text-black font-black text-xs uppercase text-center">Scan QRIS untuk melakukan pembayaran</p>
+                  <img 
+                    src="/qris.jpeg" 
+                    alt="QRIS Payment" 
+                    className="w-full h-auto aspect-square object-contain rounded-lg"
+                  />
+                  <div className="p-2 bg-primary/10 border border-primary/20 rounded-lg w-full">
+                    <p className="text-[10px] text-black font-bold text-center uppercase tracking-tighter">MH COIN RD - QRIS ALL PAYMENT</p>
+                  </div>
+                </motion.div>
+              )}
             </div>
           </section>
         </div>
@@ -234,7 +254,11 @@ Fast respon = prioritas ⚡`;
               {/* Alert for Transfer */}
               <div className="p-3 bg-accent/10 border border-accent/20 rounded-lg text-[10px] leading-relaxed">
                 <p className="text-accent font-bold mb-1 uppercase tracking-tighter">⚠️ INFORMASI PEMBAYARAN:</p>
-                <p className="text-gray-400">Pastikan nominal transfer sesuai dengan total harga agar koin terkirim otomatis.</p>
+                <p className="text-gray-400">
+                  {selectedMethod === 'qris' 
+                    ? 'Silakan scan QRIS dan bayar sesuai nominal. Setelah itu klik BELI untuk konfirmasi via WhatsApp.'
+                    : 'Pastikan nominal transfer sesuai dengan total harga agar koin terkirim otomatis.'}
+                </p>
               </div>
 
               <button 
