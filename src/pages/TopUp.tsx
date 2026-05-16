@@ -30,11 +30,10 @@ const PACKAGES = [
 ];
 
 const METHODS = [
-  { id: 'qris', name: 'QRIS (All E-Wallet)', icon: '📱' },
-  { id: 'dana', name: 'DANA', icon: '💎' },
-  { id: 'ovo', name: 'OVO', icon: '🟣' },
-  { id: 'gopay', name: 'GoPay', icon: '🔵' },
-  { id: 'bca', name: 'BCA Transfer', icon: '🏦' },
+  { id: 'qris', name: 'QRIS', icon: '/qris.png' },
+  { id: 'bca', name: 'BCA', icon: '/bca.png' },
+  { id: 'dana', name: 'DANA', icon: '/dana.png' },
+  { id: 'ovo', name: 'OVO', icon: '/ovo.png' },
 ];
 
 export default function TopUp() {
@@ -187,7 +186,11 @@ Fast respon = prioritas ⚡`;
                       : 'border-white/5 bg-[#111]'
                     }`}
                   >
-                    <span className="text-2xl">{method.icon}</span>
+                    <img 
+                      src={method.icon} 
+                      alt={method.name} 
+                      className="w-10 h-10 object-contain"
+                    />
                     <span className={`text-[10px] font-bold uppercase ${selectedMethod === method.id ? 'text-primary' : 'text-gray-300'}`}>
                       {method.name}
                     </span>
@@ -203,9 +206,9 @@ Fast respon = prioritas ⚡`;
                 >
                   <p className="text-black font-black text-xs uppercase text-center">Scan QRIS untuk melakukan pembayaran</p>
                   <img 
-                    src="/qris.jpg" 
+                    src="/qris-barcode.png" 
                     alt="QRIS Payment" 
-                    className="w-full h-auto aspect-square object-contain rounded-lg"
+                    className="w-full max-w-sm rounded-xl object-contain"
                   />
                   <div className="p-2 bg-primary/10 border border-primary/20 rounded-lg w-full">
                     <p className="text-[10px] text-black font-bold text-center uppercase tracking-tighter">MH COIN RD - QRIS ALL PAYMENT</p>

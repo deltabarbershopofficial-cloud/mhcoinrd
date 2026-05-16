@@ -28,7 +28,7 @@ export default function Navbar() {
             <img 
               src="/logo.png" 
               alt="MH COIN RD" 
-              className="h-10 w-auto object-contain transition-transform group-hover:scale-105"
+              className="h-10 object-contain transition-transform group-hover:scale-105"
             />
           </Link>
 

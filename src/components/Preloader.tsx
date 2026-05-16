@@ -29,7 +29,7 @@ export default function Preloader() {
           <img 
             src="/logo.png" 
             alt="MH COIN RD" 
-            className="h-20 w-auto object-contain drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]"
+            className="h-20 object-contain drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]"
           />
         </motion.div>
 

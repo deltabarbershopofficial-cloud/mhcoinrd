@@ -67,11 +67,11 @@ export default function Home() {
         variants={itemVariants}
         className="max-w-7xl mx-auto px-0 md:px-4 pt-0 md:pt-6"
       >
-        <div className="relative w-full overflow-hidden md:rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-b md:border border-white/10 group">
+        <div className="relative w-full overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-b md:border border-white/10 group">
           <img 
             src="/banner.png" 
             alt="Banner MH COIN RD" 
-            className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+            className="w-full h-[250px] md:h-[400px] object-cover rounded-xl transition-transform duration-700 group-hover:scale-[1.02]"
           />
         </div>
       </motion.section>
