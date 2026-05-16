@@ -1,9 +1,11 @@
-import React from 'react';
-import { motion } from 'motion/react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { ShoppingBag, ArrowRightLeft, ShieldCheck, Zap, Star, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PackageCard from '../components/PackageCard';
 import BongkarCard from '../components/BongkarCard';
+
+const BANNERS = ["/banner.png", "/banner2.png", "/banner3.png"];
 
 const FEATURED_PACKAGES = [
   { id: '150m', name: '150M Royal Dream', price: 9900 },
@@ -35,6 +37,15 @@ const BONGKAR_PACKAGES = [
 ];
 
 export default function Home() {
+  const [currentBanner, setCurrentBanner] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentBanner((prev) => (prev + 1) % BANNERS.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -62,17 +73,40 @@ export default function Home() {
       variants={containerVariants}
       className="space-y-12"
     >
-      {/* Premium Hero Banner */}
+      {/* Premium Hero Banner Slider */}
       <motion.section 
         variants={itemVariants}
         className="max-w-7xl mx-auto px-0 md:px-4 pt-0 md:pt-6"
       >
-        <div className="relative w-full overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-b md:border border-white/10 group">
-          <img 
-            src="/banner.png" 
-            alt="Banner MH COIN RD" 
-            className="w-full h-[250px] md:h-[400px] object-cover rounded-xl transition-transform duration-700 group-hover:scale-[1.02]"
-          />
+        <div className="relative w-full overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-b md:border border-white/10 group h-[250px] md:h-[400px]">
+          <AnimatePresence mode="wait">
+            <motion.img 
+              key={BANNERS[currentBanner]}
+              src={BANNERS[currentBanner]} 
+              alt={`Banner MH COIN RD ${currentBanner + 1}`} 
+              initial={{ opacity: 0, scale: 1.05 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+              className="w-full h-full object-cover rounded-xl"
+            />
+          </AnimatePresence>
+          
+          {/* Indicators */}
+          <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
+            {BANNERS.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentBanner(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  currentBanner === index 
+                    ? 'bg-primary w-6' 
+                    : 'bg-white/30 hover:bg-white/50'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </motion.section>
 
