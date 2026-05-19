@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import PackageCard from '../components/PackageCard';
 import BongkarCard from '../components/BongkarCard';
 
-const BANNERS = ["/banner.png", "/banner2.png", "/banner3.png"];
+const BANNERS = ["/banner.png", "/banner2.png", "/banner3.png", "/banner4.png"];
 
 const FEATURED_PACKAGES = [
   { id: '150m', name: '150M Royal Dream', price: 9900 },
@@ -126,6 +126,32 @@ export default function Home() {
             <ArrowRightLeft size={18} />
             <span>BONGKAR COIN (JUAL)</span>
           </button>
+        </Link>
+      </motion.section>
+
+      {/* Marketplace Teaser Section */}
+      <motion.section 
+        variants={itemVariants}
+        className="max-w-7xl mx-auto px-4"
+      >
+        <Link to="/marketplace" className="group relative block overflow-hidden rounded-3xl bg-[#050505] border border-primary/20 hover:border-primary/50 transition-all shadow-2xl">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-transparent"></div>
+          <div className="relative z-10 p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="space-y-2 text-center md:text-left">
+              <div className="inline-flex items-center gap-2 bg-primary/20 text-primary text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest border border-primary/10">
+                <Star className="w-3 h-3 fill-current" /> NEW FEATURE
+              </div>
+              <h2 className="text-3xl font-black text-white italic uppercase tracking-tighter">
+                🔥 Marketplace <span className="text-primary">Akun Royal Dream</span>
+              </h2>
+              <p className="text-gray-400 text-sm max-w-lg">
+                Jual akunmu atau beli akun impianmu di sini. Cepat, aman, dan terpercaya dengan sistem filter canggih.
+              </p>
+            </div>
+            <div className="flex items-center gap-3 bg-primary text-black font-black py-4 px-8 rounded-2xl uppercase tracking-widest group-hover:scale-105 transition-transform shrink-0">
+              Cek Marketplace <ArrowRightLeft className="w-5 h-5" />
+            </div>
+          </div>
         </Link>
       </motion.section>
 
@@ -330,7 +356,7 @@ export default function Home() {
           className="mt-12 flex justify-center"
         >
           <a 
-            href="https://wa.me/6285835410773" 
+            href="https://wa.me/62895610058176" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-10 py-4 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full font-black uppercase text-xs md:text-sm shadow-[0_10px_30px_rgba(37,211,102,0.3)] hover:scale-105 transition-all"

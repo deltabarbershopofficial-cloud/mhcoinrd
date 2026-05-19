@@ -29,5 +29,5 @@ Website Top Up & Bongkar Coin Royal Dream dengan desain modern gaming premium.
 4. Masukkan Environment Variables (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`) di settings Netlify.
 
 ## Kontak Admin
-- WhatsApp: 085835410773
+- WhatsApp: 0895610058176
 - Hubungi untuk bantuan teknis atau kerjasama.

@@ -8,6 +8,7 @@ import Bongkar from './pages/Bongkar';
 import CekTransaksi from './pages/CekTransaksi';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import Marketplace from './pages/Marketplace';
 import Preloader from './components/Preloader';
 
 export default function App() {
@@ -35,6 +36,7 @@ export default function App() {
             <Route path="/topup" element={<TopUp />} />
             <Route path="/bongkar" element={<Bongkar />} />
             <Route path="/cek-transaksi" element={<CekTransaksi />} />
+            <Route path="/marketplace" element={<Marketplace />} />
             <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={<Dashboard />} />
           </Routes>

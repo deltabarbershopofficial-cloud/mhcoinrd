@@ -17,7 +17,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="flex gap-8 uppercase font-bold tracking-widest text-[10px] text-gray-500">
           <a href="#" className="hover:text-white transition-colors">Terms</a>
           <a href="#" className="hover:text-white transition-colors">Privacy</a>
-          <a href="https://wa.me/6285835410773" className="hover:text-white transition-colors">Contact Us</a>
+          <a href="https://wa.me/62895610058176" className="hover:text-white transition-colors">Contact Us</a>
         </div>
       </footer>
       <FloatingWhatsApp />

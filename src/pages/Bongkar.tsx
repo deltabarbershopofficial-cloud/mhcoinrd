@@ -73,7 +73,7 @@ Mohon diproses.
 Fast respon = prioritas ⚡`;
 
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    window.open(`https://wa.me/6285835410773?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/62895610058176?text=${encodedMessage}`, '_blank');
   };
 
   return (

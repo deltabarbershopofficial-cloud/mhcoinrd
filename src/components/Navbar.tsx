@@ -12,6 +12,7 @@ export default function Navbar() {
     { name: 'Home', href: '/' },
     { name: 'Top Up', href: '/topup' },
     { name: 'Bongkar', href: '/bongkar' },
+    { name: 'Marketplace', href: '/marketplace' },
     { name: 'Cek Transaksi', href: '/cek-transaksi' },
   ];
 

@@ -107,7 +107,7 @@ export default function CekTransaksi() {
           <div className="pt-6 border-t border-white/5 flex flex-col items-center">
             <p className="text-xs text-gray-500 mb-2">Punya kendala? Hubungi Admin</p>
             <a 
-              href="https://wa.me/6285835410773" 
+              href="https://wa.me/62895610058176" 
               className="text-xs font-bold text-primary hover:underline"
             >
               WhatsApp Support
