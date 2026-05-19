@@ -11,8 +11,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {children}
       </main>
       <footer className="border-t border-secondary/20 bg-dark-lighter px-8 py-12 flex flex-col md:flex-row items-center justify-between gap-10">
-        <div className="text-[10px] text-gray-500 max-w-sm text-center md:text-left">
-          &copy; {new Date().getFullYear()} <span className="text-white font-bold">MH COIN RD</span> - Top Up Game Aman & Terpercaya. Layanan pengisian coin Royal Dream 24 jam otomatis tanpa antre.
+        <div className="text-[10px] text-gray-500 max-w-sm text-center md:text-left flex items-center justify-center md:justify-start gap-2">
+          <img src="/logo.png" alt="MH COIN RD Logo" className="w-5 h-5 object-contain" />
+          <span>&copy; {new Date().getFullYear()} <span className="text-white font-bold">MH COIN RD</span> - Top Up Game Aman & Terpercaya. Layanan pengisian coin Royal Dream 24 jam otomatis tanpa antre.</span>
         </div>
         <div className="flex gap-8 uppercase font-bold tracking-widest text-[10px] text-gray-500">
           <a href="#" className="hover:text-white transition-colors">Terms</a>
